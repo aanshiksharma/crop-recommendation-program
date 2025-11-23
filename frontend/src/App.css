@@ -1,6 +1,7 @@
 /* Global styles */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,7 +32,6 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 8px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -49,6 +49,31 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1rem;
+}
+
+.language-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-end: 1rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    min-height: 2rem;
+    padding-block: 0.25rem;
+    padding-inline: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #4b5563;
+    background: #374151;
+    color: #d1d5db;
+    transition: all 300ms ease-out;
+
+    &:hover {
+      background: #374151c1;
+    }
+  }
 }
 
 /* Form layout */
@@ -74,7 +99,6 @@ body {
 }
 
 .input-field {
-  width: 100%;
   padding: 0.75rem;
   background-color: #374151;
   border: 1px solid #4b5563;
@@ -193,7 +217,8 @@ body {
 }
 
 @keyframes textPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -202,7 +227,8 @@ body {
 }
 
 @keyframes pulseButton {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(132, 204, 22, 0.5);
   }
   50% {
