@@ -32,10 +32,13 @@ const App = () => {
     setResult(null);
     setError("");
 
-    const backendUrl = ["http://localhost:8000"];
+    const backendUrl = [
+      "http://localhost:8000",
+      "https://crop-recommendation-program.onrender.com",
+    ];
 
     try {
-      const response = await fetch(`${backendUrl[0]}/predict`, {
+      const response = await fetch(`${backendUrl[1]}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
