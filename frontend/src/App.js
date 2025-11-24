@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./App.css";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./i18n/i18n"; // Import the i18n config
+import "./App.css";
 
 const nutrientMap = { N: "Nitrogen", P: "Phosphorus", K: "Potassium" };
 
@@ -32,8 +32,10 @@ const App = () => {
     setResult(null);
     setError("");
 
+    const backendUrl = ["http://localhost:8000"];
+
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch(`${backendUrl[0]}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
